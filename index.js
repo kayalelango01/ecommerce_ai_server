@@ -12,9 +12,8 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['https://localhost:3000',
-  'https://ecommerce-ai-client-hazel.vercel.app'
-  ],
+  origin: ['http://localhost:3000', 'https://localhost:3000', 
+    'https://ecommerce-ai-client-hazel.vercel.app', /.vercel.app$/],
   credentials: true,
 }));
 app.use(express.json());
